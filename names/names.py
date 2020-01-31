@@ -14,12 +14,16 @@ f.close()
 
 duplicates = []
 # set bstree to BinarySearchTree containing 'names'
-
+bstree = BinarySearchTree('names')
 # for names in names_1, use insert (from bst.py) to insert names into bstree
-
+for names in names_1:
+    bstree.insert(names)
 # for name in names_2, if bstree contains (from bst.py) name, append the duplicate names
-
+for name in names_2:
+    if bstree.contains(name):
+        duplicates.append(name)
 # Runtime will be O(n) I think
+# runtime: 0.09803485870361328 seconds, 64 duplicates
 
 
 # duplicates = []
